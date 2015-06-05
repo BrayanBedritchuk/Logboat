@@ -23,7 +23,6 @@ public class LogbookGenerator {
 	public void generate() {
 		try {
 			initConfigParams();
-			initLogbookDirectory();
 			initMonthDirectory();
 			initTextFile();
 		} catch (Exception e) {
@@ -80,26 +79,12 @@ public class LogbookGenerator {
 		configParams.setDirectoryPath(listConfigFile.get(1));
 	}
 
-	private void initLogbookDirectory() throws Exception {
-		try {
-			File logbookDirectory = new File(configParams.getLogbookDirectoryPath());
-
-			if (!logbookDirectory.exists()) {
-				logbookDirectory.mkdir();
-			}
-		} catch (Exception e) {
-			throw new Exception(
-					"An error occurred while initializing the main directory of the Logbook. "
-							+ e.getMessage(), e);
-		}
-	}
-
 	private void initMonthDirectory() throws Exception {
 		try {
 			File monthDirectory = new File(configParams.getMonthDirectoryPath());
 
 			if (!monthDirectory.exists()) {
-				monthDirectory.mkdir();
+				monthDirectory.mkdirs();
 			}
 		} catch (Exception e) {
 			throw new Exception(

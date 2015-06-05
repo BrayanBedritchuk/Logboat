@@ -11,19 +11,22 @@ public class ConfigParams {
 	private static final String LOGBOOK_FILE_TYPE = ".txt";
 	private static final String LOGBOOK_DATE_PATTERN = "dd-MM-yyyy (D)";
 	private static final String LOGBOOK_MONTH_PATTERN = "MM - MMMMMMMMMMMMMMM";
+	private static final String LOGBOOK_YEAR_PATTERN = "yyyy";
 
 	private String directoryPath;
 	private String directoryName;
-	
+
 	private Calendar currentCalendar;
-	
+
 	private SimpleDateFormat formatLogbookDate;
 	private SimpleDateFormat formatLogbookMonth;
+	private SimpleDateFormat formatLogbookYear;
 
 	public ConfigParams(Calendar currentCalendar) {
 		this.currentCalendar = currentCalendar;
 		this.formatLogbookDate = new SimpleDateFormat(LOGBOOK_DATE_PATTERN, Locale.getDefault());
 		this.formatLogbookMonth = new SimpleDateFormat(LOGBOOK_MONTH_PATTERN, Locale.getDefault());
+		this.formatLogbookYear = new SimpleDateFormat(LOGBOOK_YEAR_PATTERN, Locale.getDefault());
 	}
 
 	public String getTextFilePath() throws FileNotFoundException {
@@ -35,11 +38,16 @@ public class ConfigParams {
 	}
 
 	public String getMonthDirectoryPath() throws FileNotFoundException {
-		return (getLogbookDirectoryPath() + File.separator + getMonthDirectoryName());
+		return (getLogbookDirectoryPath() + File.separator + getYearDirectoryName()
+				+ File.separator + getMonthDirectoryName());
 	}
 
 	private String getMonthDirectoryName() {
 		return formatLogbookMonth.format(currentCalendar.getTime());
+	}
+
+	private String getYearDirectoryName() {
+		return formatLogbookYear.format(currentCalendar.getTime());
 	}
 
 	public String getLogbookDirectoryPath() throws FileNotFoundException {

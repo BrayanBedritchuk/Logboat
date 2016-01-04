@@ -9,7 +9,7 @@ import java.util.Locale;
 public class ConfigParams {
 
 	private static final String LOGBOOK_FILE_TYPE = ".txt";
-	private static final String LOGBOOK_DATE_PATTERN = "dd-MM-yyyy (D)";
+	private static final String LOGBOOK_DATE_PATTERN = "dd-MM-yyyy (DD)";
 	private static final String LOGBOOK_MONTH_PATTERN = "MM - MMMMMMMMMMMMMMM";
 	private static final String LOGBOOK_YEAR_PATTERN = "yyyy";
 

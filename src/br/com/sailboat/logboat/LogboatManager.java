@@ -1,10 +1,8 @@
 package br.com.sailboat.logboat;
 
 import java.awt.Desktop;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
@@ -33,7 +31,7 @@ public class LogboatManager {
 			initMonthFolder();
 			initTextFile();
 		} catch (FileChooserCanceledException e) {
-			e.printStackTrace();
+			terminateExecution();
 		} catch (Exception e) {
 			e.printStackTrace();
 			showErrorDialog(e);
@@ -109,6 +107,10 @@ public class LogboatManager {
 
 	private JFileChooser getFileChooserFoldersOnly() {
 		return FileChooserHelper.getFileChooserFoldersOnly();
+	}
+	
+	private void terminateExecution() {
+		System.exit(0);
 	}
 
 	public String getRootPath() {

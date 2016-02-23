@@ -1,6 +1,8 @@
 package br.com.sailboat.logboat;
 
-import br.com.sailboat.logboat.helper.UiHelper;
+import javax.swing.UIManager;
+
+import br.com.sailboat.logboat.helper.DialogHelper;
 
 public class Main {
 
@@ -10,7 +12,12 @@ public class Main {
 	}
 
 	private static void applySystemLookAndFeel() {
-		UiHelper.applySystemLookAndFeel();
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+			e.printStackTrace();
+			DialogHelper.showErrorDialog("An error occurred while setting the look and feel of the application");
+		}
 	}
 
 	private static void generateLogboat() {

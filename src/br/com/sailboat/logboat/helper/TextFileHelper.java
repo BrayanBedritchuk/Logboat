@@ -15,7 +15,6 @@ public class TextFileHelper {
 	}
 
 	public static void createTextFile(String path) throws FileNotFoundException, UnsupportedEncodingException {
-
 		createTextFileWithContent(path, null);
 	}
 

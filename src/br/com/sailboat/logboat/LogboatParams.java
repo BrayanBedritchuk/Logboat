@@ -7,12 +7,12 @@ import java.util.Date;
 
 public class LogboatParams {
 
-	public static final String LOGBOAT_FOLDER_NAME = "Logboat";
+	public static final String FOLDER_NAME = "Logboat";
 
-	private static final String LOGBOAT_FILE_TYPE = ".txt";
-	private static final String LOGBOAT_DATE_PATTERN = "dd-MM-yyyy (DD)";
-	private static final String LOGBOAT_MONTH_PATTERN = "MM - MMMMMMMMMMMMMMM";
-	private static final String LOGBOAT_YEAR_PATTERN = "yyyy";
+	private static final String FILE_TYPE = ".txt";
+	private static final String DATE_PATTERN = "dd-MM-yyyy (DD)";
+	private static final String MONTH_PATTERN = "MM - MMMMMMMMMMMMMMM";
+	private static final String YEAR_PATTERN = "yyyy";
 
 	private LogboatParams() {
 	}
@@ -22,7 +22,7 @@ public class LogboatParams {
 		path.append(getMonthFolderPath(rootPath));
 		path.append(File.separator);
 		path.append(getFileName());
-		path.append(LOGBOAT_FILE_TYPE);
+		path.append(FILE_TYPE);
 		
 		return path.toString();
 	}
@@ -42,21 +42,21 @@ public class LogboatParams {
 		StringBuilder path = new StringBuilder();
 		path.append(rootPath);
 		path.append(File.separator);
-		path.append(LOGBOAT_FOLDER_NAME);
+		path.append(FOLDER_NAME);
 		
 		return path.toString();
 	}
 	
 	private static String getFileName() {
-		return new SimpleDateFormat(LOGBOAT_DATE_PATTERN).format(getCurrentDate());
+		return new SimpleDateFormat(DATE_PATTERN).format(getCurrentDate());
 	}
 	
 	private static String getMonthFolderName() {
-		return new SimpleDateFormat(LOGBOAT_MONTH_PATTERN).format(getCurrentDate());
+		return new SimpleDateFormat(MONTH_PATTERN).format(getCurrentDate());
 	}
 
 	private static String getYearFolderName() {
-		return new SimpleDateFormat(LOGBOAT_YEAR_PATTERN).format(getCurrentDate());
+		return new SimpleDateFormat(YEAR_PATTERN).format(getCurrentDate());
 	}
 	
 	private static Date getCurrentDate() {

@@ -11,9 +11,6 @@ public class TextFileHelper {
 
 	public static final String DEFAULT_ENCODING = "UTF-8";
 
-	private TextFileHelper() {
-	}
-
 	public static void createTextFile(String path) throws FileNotFoundException, UnsupportedEncodingException {
 		createTextFileWithContent(path, null);
 	}

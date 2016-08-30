@@ -5,12 +5,9 @@ import java.io.File;
 import javax.swing.JFileChooser;
 
 public class FileChooserHelper {
-	
+
 	private static final String DEFAULT_APPROVE_BUTTON_TEXT = "Select";
-	
-	private FileChooserHelper() {
-	}
-	
+
 	public static JFileChooser getFileChooserFoldersOnly() {
 		JFileChooser chooser = new JFileChooser(getDesktopPath());
 		chooser.setControlButtonsAreShown(true);
@@ -19,7 +16,7 @@ public class FileChooserHelper {
 		chooser.setDialogType(JFileChooser.SAVE_DIALOG);
 		return chooser;
 	}
-	
+
 	private static String getDesktopPath() {
 		return (System.getProperty("user.home") + File.separator + "Desktop");
 	}

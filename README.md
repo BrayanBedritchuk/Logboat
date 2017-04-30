@@ -1,3 +1,3 @@
-# :sailboat:Logboat
+# Logboat
 
 A simple text file generator.

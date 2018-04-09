@@ -1,1 +1,1 @@
-(art/logboat.png)
+![Logboat](art/logboat.png)

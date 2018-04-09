@@ -1,3 +1,1 @@
-# Logboat
-
-A simple text file generator.
+(art/logboat.png)

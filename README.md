@@ -1,9 +1,7 @@
-![Logboat](art/logboat.png)
-
-## Introduction
-
-Logboat is a minimalist [logbook](https://en.wikipedia.org/wiki/Logbook) generator.
+[![Logboat](art/logboat.png)][1]
 
 ## Structure of generated files
 
-![Logboat](art/structure.png)
+[![Logboat](art/structure.png)][1]
+
+[1]: https://en.wikipedia.org/wiki/Logbook

@@ -1,10 +1,8 @@
 # ![](design/header.svg)
-A logbook is a record of important events in the management, operation, and navigation of a ship. It is essential to traditional navigation, and must be filled in at least daily.
+A [logbook](https://en.wikipedia.org/wiki/Logbook) is a record of important events in the management, operation, and navigation of a ship. It is essential to traditional navigation, and must be filled in at least daily.
 
-A directory will be generated for the current year, current month and a text file corresponding to the current day.
-[![Logboat](design/structure.svg)][1]
-
-[1]: https://en.wikipedia.org/wiki/Logbook
+A directory will be generated for the current year and month with a text file corresponding to the current day.
+![](design/structure.svg)
 
 ## Built with
 * [MVP](https://en.wikipedia.org/wiki/Model-view-presenter) ∙ A architectural pattern used for building user interfaces.

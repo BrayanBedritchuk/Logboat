@@ -1,1 +1,5 @@
-/bin
+build/
+.idea/
+.gradle/
+config.txt
+src/main/resources/META-INF/MANIFEST.MF

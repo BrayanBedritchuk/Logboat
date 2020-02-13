@@ -1,15 +1,15 @@
 # ![](design/header.svg)
 A logbook is a record of important events in the management, operation, and navigation of a ship. It is essential to traditional navigation, and must be filled in at least daily.
 
+A directory will be generated for the current year, current month and a text file corresponding to the current day.
+[![Logboat](design/structure.svg)][1]
+
+[1]: https://en.wikipedia.org/wiki/Logbook
+
 ## Built with
 * [MVP](https://en.wikipedia.org/wiki/Model-view-presenter) ∙ A architectural pattern used for building user interfaces.
 * [JUnit](https://junit.org/) ∙ A Java Testing Framework.
 * [Mockito](https://site.mockito.org/) ∙ A Java Testing Framework that allows the creation of test double objects in automated unit tests.
-
-## Structure of generated files
-[![Logboat](design/structure.png)][1]
-
-[1]: https://en.wikipedia.org/wiki/Logbook
 
 ## Architecture
 Based on the principles of [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), the app has been divided into 4 layers: Main, UI, Data and Domain.

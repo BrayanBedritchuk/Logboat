@@ -9,11 +9,11 @@ The use of logbooks was extremely important in the day-to-day travel of Amyr. In
 This app is the result of automating this habit.
 
 ## How it works
-When executed, after the user selects a root directory, a new directory will be generated for the current year and month with an empty text file corresponding to the current day. At the end, text file will be opened.
-
-If the directory structure and text file already exists, nothing new will be generated and the current text file will be opened.
+When executed, after the user selects a root directory, a new directory will be generated for the current year and month with an empty text file corresponding to the current day. At the end, the text file will be opened.
 
 ![](design/structure.svg)
+
+If the directory structure and text file already exists, nothing new will be generated and the current text file will be opened.
 
 ## Built with
 * [MVP](https://en.wikipedia.org/wiki/Model-view-presenter) ∙ A architectural pattern used for building user interfaces.

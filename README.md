@@ -1,7 +1,18 @@
 # ![](design/header.svg)
-A [logbook](https://en.wikipedia.org/wiki/Logbook) is a record of important events in the management, operation, and navigation of a ship. It is essential to traditional navigation, and must be filled in at least daily.
+A [logbook](https://en.wikipedia.org/wiki/Logbook) is a record of important events in the management, operation, and navigation of a ship.
 
-A directory will be generated for the current year and month with a text file corresponding to the current day.
+I was first introduced to logbooks through the book 100 Days Between Sea and Sky by [Amyr Klink](https://en.wikipedia.org/wiki/Amyr_Klink).
+
+Amyr is a Brazilian sailor that was the first person to row across the South Atlantic from Africa to Brazil.
+
+The use of logbooks was extremely important in the day-to-day travel of Amyr. Inspired by this, I got in the habit of recording my daily activities in simple text files.
+This app is the result of automating this habit.
+
+## How it works
+When executed, after the user selects a root directory, a new directory will be generated for the current year and month with an empty text file corresponding to the current day. At the end, text file will be opened.
+
+If the directory structure and text file already exists, nothing new will be generated and the current text file will be opened.
+
 ![](design/structure.svg)
 
 ## Built with

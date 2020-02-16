@@ -4,6 +4,7 @@ import br.com.sailboat.logbook.domain.Logbook;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -26,14 +27,25 @@ public class LogbookDataTest {
 
     @Test
     public void shouldGetMothPathSuccessfully() {
-        String monthPath = LogbookData.getMonthPath("root\\path", logbook);
-        assertThat(monthPath, is("root\\path\\logbook\\2020\\02 - February"));
+        String monthPath = LogbookData.getMonthPath("root" + File.separator + "path", logbook);
+        String result = "root" + File.separator +
+                "path" + File.separator +
+                "logbook" + File.separator +
+                "2020" + File.separator +
+                "02 - February";
+        assertThat(monthPath, is(result));
     }
 
     @Test
     public void shouldGetFullPathSuccessfully() {
-        String fullPath = LogbookData.getFullPath("root\\path", logbook);
-        assertThat(fullPath, is("root\\path\\logbook\\2020\\02 - February\\13-02-2020 (44).txt"));
+        String fullPath = LogbookData.getFullPath("root" + File.separator + "path", logbook);
+        String result = "root" + File.separator +
+                "path" + File.separator +
+                "logbook" + File.separator +
+                "2020" + File.separator +
+                "02 - February" + File.separator +
+                "13-02-2020 (44).txt";
+        assertThat(fullPath, is(result));
     }
 
 }

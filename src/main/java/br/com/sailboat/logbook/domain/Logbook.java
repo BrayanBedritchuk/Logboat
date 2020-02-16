@@ -8,7 +8,7 @@ public class Logbook {
 
     private static final String YEAR_PATTERN = "yyyy";
     private static final String MONTH_PATTERN = "MM - MMMMMMMMMMMMMMM";
-    private static final String DATE_PATTERN = "dd-MM-yyyy (DD)";
+    private static final String DAY_PATTERN = "dd-MM-yyyy (DD)";
 
     private Date date;
     private Locale locale;
@@ -27,7 +27,7 @@ public class Logbook {
     }
 
     public String getDay() {
-        return new SimpleDateFormat(DATE_PATTERN, locale).format(this.date);
+        return new SimpleDateFormat(DAY_PATTERN, locale).format(this.date);
     }
 
 }

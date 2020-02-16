@@ -20,7 +20,7 @@ public class RepositoryImpl implements Repository {
 
     @Override
     public boolean configurationExists() {
-        return this.configurationData.exists();
+        return this.configurationData.getFile().exists();
     }
 
     @Override

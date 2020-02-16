@@ -11,10 +11,6 @@ public class ConfigurationData {
         this.configFile = new File(CONFIG_FILE_NAME);
     }
 
-    public boolean exists() {
-        return configFile.exists();
-    }
-
     public File getFile() {
         return this.configFile;
     }

@@ -16,6 +16,7 @@ When executed, after the user selects a root directory, a new directory will be 
 If the directory structure and text file already exists, nothing new will be generated and the current text file will be opened.
 
 ## Built with
+* Java
 * [MVP](https://en.wikipedia.org/wiki/Model-view-presenter) ∙ A architectural pattern used for building user interfaces.
 * [JUnit](https://junit.org/) ∙ A Java Testing Framework.
 * [Mockito](https://site.mockito.org/) ∙ A Java Testing Framework that allows the creation of test double objects in automated unit tests.
